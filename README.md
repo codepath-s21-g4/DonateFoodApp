@@ -30,31 +30,31 @@ Original App Design Project - README Template
 **Required Must-have Stories**
 
 Restaurants
-* create an account
-* login/logout
-* view profile
-* post a food donation request
-* table view of all the food donation requests
-* can edit and remove food donation request
-* can see driver profile who accepted request and ETA
+* [ ] create an account
+* [ ] login/logout
+* [ ] view profile
+* [ ] post a food donation request
+* [ ] table view of all the food donation requests
+* [ ] can edit and remove food donation request
+* [ ] can see driver profile who accepted request and ETA
 
 Driver/Volunteer
-* create an account
-* login/logout
-* view profile
-* table view of all the food donation requests (and filter)
-* accept food donation request
-* map with 3 closest shelters to restaurant
+* [ ] create an account
+* [ ] login/logout
+* [ ] view profile
+* [ ] table view of all the food donation requests (and filter)
+* [ ] accept food donation request
+* [ ] map with 3 closest shelters to restaurant
 
 **Optional Nice-to-have Stories**
 
 Restaurants
-* can track the driver's journey to restaurant (ETA) and to the delivery-site
-* location tracker
-* status bar for driver and restaurant to see the progress of the mission
+* [ ] can track the driver's journey to restaurant (ETA) and to the delivery-site
+* [ ] location tracker
+* [ ] status bar for driver and restaurant to see the progress of the mission
 
 Driver/Volunteer
-* points system that tracks how many runs and a page where they can redeem it
+* [ ] points system that tracks how many runs and a page where they can redeem it
 
 ### 2. Screen Archetypes
 
