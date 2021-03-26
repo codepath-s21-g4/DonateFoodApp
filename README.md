@@ -11,7 +11,7 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]: Restaurant will post picture/list of food, then app will calculate (3 closest) shelters and the driver will able to see distance from restaurant to shelter. Driver can choose the request and drive to the shelter of their choosing, upon completion the driver indicates that in the app and earns points. After earning enough points, Driver can use that at a participating restaurant for discounts to reward volunteering work. 
+Restaurant will post picture/list of food, then app will calculate (3 closest) shelters and the driver will able to see distance from restaurant to shelter. Driver can choose the request and drive to the shelter of their choosing, upon completion the driver indicates that in the app and earns points. After earning enough points, Driver can use that at a participating restaurant for discounts to reward volunteering work. 
 
 
 ### App Evaluation
