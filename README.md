@@ -89,13 +89,37 @@ Driver/Volunteer
 * Map Screen -> Accept Request Screen
 
 ## Wireframes
-### Digital Wireframes & Mockups
-
+[Add picture of your hand sketched wireframes in this section]
 ![image](https://user-images.githubusercontent.com/54826539/114124246-dd520600-98a8-11eb-9c63-9992efc663d9.png)
 ![image](https://user-images.githubusercontent.com/54826539/114124359-21450b00-98a9-11eb-924d-d50544fdfb25.png)
 ![image](https://user-images.githubusercontent.com/54826539/114124514-80a31b00-98a9-11eb-8e5e-f75221d44f0a.png)
 
+
+### [BONUS] Digital Wireframes & Mockups
+Driver
+
+<table><tr>
+<td> <img width="250" alt="Screen Shot 2021-04-08 at 8 47 21 PM" src="https://user-images.githubusercontent.com/24361483/114126103-9ebe4a80-98ac-11eb-8715-7f3edd79474b.png" > </td>
+<td> <img width="250" alt="Screen Shot 2021-04-08 at 8 47 43 PM" src="https://user-images.githubusercontent.com/24361483/114126109-a1b93b00-98ac-11eb-8f1f-a482a7b3f16a.png">
+ </td>
+</tr></table>
+
+Restaurant
+<table><tr>
+<td> <img width="250" alt="Screen Shot 2021-04-08 at 8 58 36 PM" src="https://user-images.githubusercontent.com/24361483/114126460-50f61200-98ad-11eb-8180-c715a468b2e2.png" > </td>
+<td> <img width="250" alt="Screen Shot 2021-04-08 at 8 58 52 PM" src="https://user-images.githubusercontent.com/24361483/114126466-54899900-98ad-11eb-8f75-e76e029f540a.png" ></td>
+</tr></table>
+
+
 ### [BONUS] Interactive Prototype
+Driver's Side
+
+<img src="http://g.recordit.co/V6gxKQbGZe.gif" width=250>
+
+
+Restaurant's Side
+
+<img src="http://g.recordit.co/V6gxKQbGZe.gif" width=250>
 
 ## Schema 
 [This section will be completed in Unit 9]
