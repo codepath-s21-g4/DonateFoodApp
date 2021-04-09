@@ -89,13 +89,11 @@ Driver/Volunteer
 * Map Screen -> Accept Request Screen
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
+### Digital Wireframes & Mockups
+
 ![image](https://user-images.githubusercontent.com/54826539/114124246-dd520600-98a8-11eb-9c63-9992efc663d9.png)
 ![image](https://user-images.githubusercontent.com/54826539/114124359-21450b00-98a9-11eb-924d-d50544fdfb25.png)
 ![image](https://user-images.githubusercontent.com/54826539/114124514-80a31b00-98a9-11eb-8e5e-f75221d44f0a.png)
-
-
-### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
 
