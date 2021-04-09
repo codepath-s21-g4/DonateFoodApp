@@ -119,7 +119,7 @@ Driver's Side
 
 Restaurant's Side
 
-<img src="https://recordit.co/QHuQgtuMQQ" width=250>
+<img src="http://g.recordit.co/QHuQgtuMQQ.gif" width=250>
 
 ## Schema 
 [This section will be completed in Unit 9]
