@@ -127,6 +127,10 @@ Restaurant's Side
 ![DB_models](DB_models.png)
 ### Networking
 - Login Screen
-	- (POST)
+	- (POST) User Authentication
+- Register Screen
+	- (POST) Create new user/restaurant
+- Restaurant Home Screen
+	- (GET) Restaurant Data (ie Restaurant Name)
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
