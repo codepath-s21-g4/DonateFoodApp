@@ -126,6 +126,7 @@ Restaurant's Side
 ### Models
 ![DB_models](DB_models.png)
 ### Networking
-- [Add list of network requests by screen ]
+- Login Screen
+	- 
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
