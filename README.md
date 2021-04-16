@@ -127,10 +127,32 @@ Restaurant's Side
 ![DB_models](DB_models.png)
 ### Networking
 - Login Screen
-	- (POST) User Authentication
+	- (POST) Create/Send User Authentication
 - Register Screen
 	- (POST) Create new user/restaurant
 - Restaurant Home Screen
-	- (GET) Restaurant Data (ie Restaurant Name)
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+	- (GET) Read Restaurant Data
+- Restaurant's View of Driver Profile
+	- (GET) Read Driver Data
+- Add/Edit Pickup Request Screen
+	- (POST) Create Food Delivery Request Object
+	- (PUT) Update Food Delivery Request Object
+- Add Reward Screen
+	- (POST) Create new reward for restaurant
+	- (PUT) Update reward for restaurant
+- Restaurant's View of Restaurant Profile Screen
+	- (GET) Read Restaurant Data
+- Restaurant Edit Profile Screen
+	- (PUT) Update Restaurant Profile
+- Driver Home Screen
+	- (GET) Read Driver Data
+- Table View Screen
+	- (GET) Read Food Delivery Requests
+- Driver's View of Restaurant Profile
+	- (GET) Read Restaurant Data
+- Driver's View of Driver Profile
+	- (GET) Read Restaurant Data
+- Driver Edit Profile
+	- (PUT) Update Driver Profile
+- Accept Request
+	- (PUT) Update Food Deliver Request to add Driver_ID
