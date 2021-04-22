@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7BBD537263137C400E142D1 /* PickupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BBD536263137C400E142D1 /* PickupsViewController.swift */; };
 		DED7297B2628FC57006FE76B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7297A2628FC57006FE76B /* AppDelegate.swift */; };
 		DED7297D2628FC57006FE76B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7297C2628FC57006FE76B /* SceneDelegate.swift */; };
 		DED7297F2628FC57006FE76B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7297E2628FC57006FE76B /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7BBD536263137C400E142D1 /* PickupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupsViewController.swift; sourceTree = "<group>"; };
 		DED729772628FC56006FE76B /* Donate Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Donate Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED7297A2628FC57006FE76B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DED7297C2628FC57006FE76B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				DED729832628FC59006FE76B /* Assets.xcassets */,
 				DED729852628FC59006FE76B /* LaunchScreen.storyboard */,
 				DED729882628FC59006FE76B /* Info.plist */,
+				A7BBD536263137C400E142D1 /* PickupsViewController.swift */,
 			);
 			path = "Donate Food";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7BBD537263137C400E142D1 /* PickupsViewController.swift in Sources */,
 				DED7297F2628FC57006FE76B /* ViewController.swift in Sources */,
 				DED7297B2628FC57006FE76B /* AppDelegate.swift in Sources */,
 				DED7297D2628FC57006FE76B /* SceneDelegate.swift in Sources */,
