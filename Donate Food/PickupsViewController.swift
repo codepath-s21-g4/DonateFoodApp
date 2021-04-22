@@ -14,23 +14,28 @@ class PickupsViewController: UIViewController, UITableViewDataSource, UITableVie
 
     @IBOutlet weak var tableView: UITableView!
     
+    var restaurants: [String] = ["Golden Palace", "Amy's Cafe", "Joe's Grill", "Pete's Pizza", "Bob's Burger", "Olive Garden", "Royal Cuisine", "Chicken Express", "JollyBees", "Popeyes", "Mountain Mikes", "Tina's Tacos", "Dairy Queen", "Andrea's Food", "JJ's Fish & Chips", "Pancake House", "Napoli Pizzeria", "Ruth's Kitchen"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         tableView.delegate = self
 
-        // Do any additional setup after loading the view.
+        //self.tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50;
+        return restaurants.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell") as! RestaurantCell
         
-        cell.textLabel!.text = "row: \(indexPath.row)"
+        let title = restaurants[indexPath.row]
+        
+        //cell.textLabel!.text = restaurants[indexPath.row]
+        cell.nameLabel.text = title
         
         return cell;
     }
