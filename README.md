@@ -33,10 +33,12 @@ Restaurants
 * [ ] create an account
 * [ ] login/logout (progress)
 <img src='https://recordit.co/6hmmHeadTu.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 * [ ] view profile
 * [ ] post a food donation request
 * [ ] table view of all the food donation requests (progress)
 <img src='http://g.recordit.co/bhMRvXyP0Y.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 * [ ] can edit and remove food donation request
 * [ ] can see driver profile who accepted request and ETA
 
