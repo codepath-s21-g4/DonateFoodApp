@@ -31,7 +31,8 @@ Restaurant will post picture/list of food, then app will calculate (3 closest) s
 
 Restaurants
 * [ ] create an account
-* [ ] login/logout
+* [ ] login/logout (progress)
+<img src='https://recordit.co/6hmmHeadTu.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 * [ ] view profile
 * [ ] post a food donation request
 * [ ] table view of all the food donation requests
