@@ -16,6 +16,7 @@ class PickupsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var restaurants: [String] = ["Golden Palace", "Amy's Cafe", "Joe's Grill", "Pete's Pizza", "Bob's Burger", "Olive Garden", "Royal Cuisine", "Chicken Express", "JollyBees", "Popeyes", "Mountain Mikes", "Tina's Tacos", "Dairy Queen", "Andrea's Food", "JJ's Fish & Chips", "Pancake House", "Napoli Pizzeria", "Ruth's Kitchen"]
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
