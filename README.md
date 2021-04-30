@@ -34,8 +34,10 @@ Restaurants
 * [x] login/logout (progress)
 <img src='https://recordit.co/6hmmHeadTu.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-* [ ] view profile
-* [ ] post a food donation request
+* [x] view profile (progress)
+<img src='http://g.recordit.co/EmsSme0NK7.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+* [x] post a food donation request (progress)
 * [x] table view of all the food donation requests (progress)
 <img src='http://g.recordit.co/bhMRvXyP0Y.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
