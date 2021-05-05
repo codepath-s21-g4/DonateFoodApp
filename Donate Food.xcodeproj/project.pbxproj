@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE91C71226322D8B00DB79F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91C71126322D8B00DB79F5 /* LoginViewController.swift */; };
 		DED7297B2628FC57006FE76B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7297A2628FC57006FE76B /* AppDelegate.swift */; };
 		DED7297D2628FC57006FE76B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7297C2628FC57006FE76B /* SceneDelegate.swift */; };
-		DED7297F2628FC57006FE76B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7297E2628FC57006FE76B /* ViewController.swift */; };
 		DED729822628FC57006FE76B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED729802628FC57006FE76B /* Main.storyboard */; };
 		DED729842628FC59006FE76B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DED729832628FC59006FE76B /* Assets.xcassets */; };
 		DED729872628FC59006FE76B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED729852628FC59006FE76B /* LaunchScreen.storyboard */; };
@@ -35,10 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE91C71126322D8B00DB79F5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DED729772628FC56006FE76B /* Donate Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Donate Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED7297A2628FC57006FE76B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DED7297C2628FC57006FE76B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DED7297E2628FC57006FE76B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DED729812628FC57006FE76B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DED729832628FC59006FE76B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DED729862628FC59006FE76B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,11 +101,11 @@
 			children = (
 				DED7297A2628FC57006FE76B /* AppDelegate.swift */,
 				DED7297C2628FC57006FE76B /* SceneDelegate.swift */,
-				DED7297E2628FC57006FE76B /* ViewController.swift */,
 				DED729802628FC57006FE76B /* Main.storyboard */,
 				DED729832628FC59006FE76B /* Assets.xcassets */,
 				DED729852628FC59006FE76B /* LaunchScreen.storyboard */,
 				DED729882628FC59006FE76B /* Info.plist */,
+				DE91C71126322D8B00DB79F5 /* LoginViewController.swift */,
 			);
 			path = "Donate Food";
 			sourceTree = "<group>";
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED7297F2628FC57006FE76B /* ViewController.swift in Sources */,
+				DE91C71226322D8B00DB79F5 /* LoginViewController.swift in Sources */,
 				DED7297B2628FC57006FE76B /* AppDelegate.swift in Sources */,
 				DED7297D2628FC57006FE76B /* SceneDelegate.swift in Sources */,
 			);
