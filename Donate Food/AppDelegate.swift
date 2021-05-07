@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // If local environment
+        setenv("DATABASE_URL", "http://localhost:8002", 1)
+        
+        // If pulling from prod database
+//        setenv("DATABASE_URL", "https://donatefood-backend.herokuapp.com/", 1)
+        
         return true
     }
 

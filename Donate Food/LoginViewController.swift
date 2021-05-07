@@ -10,6 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBAction func loginButton(_ sender: Any) {
+        API.registerUser(email: "testemail", password: "testpassword", firstName: "fname", phoneNumber: "lname", accountType: "Driver")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

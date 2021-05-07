@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon-App-76x76" translatesAutoresizingMaskIntoConstraints="NO" id="4IE-8H-fnb">
-                                <rect key="frame" x="124.5" y="275" width="165" height="165"/>
+                                <rect key="frame" x="125" y="241" width="165" height="165"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="165" id="ENN-VK-ueI"/>
                                 </constraints>
@@ -35,10 +35,10 @@
                         <constraints>
                             <constraint firstItem="t5M-xC-NQv" firstAttribute="centerX" secondItem="4IE-8H-fnb" secondAttribute="centerX" id="7Si-Ou-gIh"/>
                             <constraint firstItem="t5M-xC-NQv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="379" id="Gi9-VS-Awe"/>
-                            <constraint firstItem="4IE-8H-fnb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="231" id="XQz-vb-rDI"/>
+                            <constraint firstItem="4IE-8H-fnb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="197" id="XQz-vb-rDI"/>
                             <constraint firstItem="t5M-xC-NQv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="bSE-rF-QyG"/>
                             <constraint firstItem="4IE-8H-fnb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fak-3G-u3U"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4IE-8H-fnb" secondAttribute="bottom" constant="422" id="wog-JR-di1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4IE-8H-fnb" secondAttribute="bottom" constant="456" id="wog-JR-di1"/>
                             <constraint firstItem="t5M-xC-NQv" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="y2i-tj-6AK"/>
                         </constraints>
                     </view>
