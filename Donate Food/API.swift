@@ -42,7 +42,7 @@ struct API {
     
     static func registerUser(email: String, password: String, firstName: String, phoneNumber: String, accountType: String) {
         
-        let dataToSend: [String: Any] = ["email": email, "password": password, "first_name": firstName, "phone_num": phoneNumber, "account_type": accountType]
+        let dataToSend: [String: Any] = ["email": email, "password": password, "first_name": firstName, "phone_number": phoneNumber, "account_type": accountType]
         
         let jsonData = try? JSONSerialization.data(withJSONObject: dataToSend)
         
