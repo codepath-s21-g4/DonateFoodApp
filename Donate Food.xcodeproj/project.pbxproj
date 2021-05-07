@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34085CF026450F1A00BA1EF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34085CEF26450F1A00BA1EF5 /* LoginViewController.swift */; };
+		349382B126450E9D00571719 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349382B026450E9D00571719 /* RegisterViewController.swift */; };
 		A7B5CE3B264465930081A2F3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5CE3A264465930081A2F3 /* API.swift */; };
 		A7BBD537263137C400E142D1 /* PickupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BBD536263137C400E142D1 /* PickupsViewController.swift */; };
 		A7BBD53C2631457900E142D1 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BBD53B2631457800E142D1 /* RestaurantCell.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34085CEF26450F1A00BA1EF5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		349382B026450E9D00571719 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A7B5CE3A264465930081A2F3 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A7BBD536263137C400E142D1 /* PickupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupsViewController.swift; sourceTree = "<group>"; };
 		A7BBD53B2631457800E142D1 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				A7BBD545263B8B5000E142D1 /* RestaurantHomeViewController.swift */,
 				A7BBD54A263B8CB700E142D1 /* RestaurantProfileViewController.swift */,
 				A7B5CE3A264465930081A2F3 /* API.swift */,
+				349382B026450E9D00571719 /* RegisterViewController.swift */,
+				34085CEF26450F1A00BA1EF5 /* LoginViewController.swift */,
 			);
 			path = "Donate Food";
 			sourceTree = "<group>";
@@ -278,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7BBD53C2631457900E142D1 /* RestaurantCell.swift in Sources */,
+				349382B126450E9D00571719 /* RegisterViewController.swift in Sources */,
 				A7BBD54B263B8CB700E142D1 /* RestaurantProfileViewController.swift in Sources */,
 				A7BBD546263B8B5000E142D1 /* RestaurantHomeViewController.swift in Sources */,
 				A7BBD541263B894300E142D1 /* DonateViewController.swift in Sources */,
@@ -286,6 +293,7 @@
 				DED7297B2628FC57006FE76B /* AppDelegate.swift in Sources */,
 				A7B5CE3B264465930081A2F3 /* API.swift in Sources */,
 				DED7297D2628FC57006FE76B /* SceneDelegate.swift in Sources */,
+				34085CF026450F1A00BA1EF5 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
