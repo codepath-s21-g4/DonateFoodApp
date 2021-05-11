@@ -73,11 +73,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CkC-wm-cGw">
+                                <rect key="frame" x="64" y="678" width="281" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="E8s-t1-PGE"/>
+                    <connections>
+                        <outlet property="emailField" destination="dg2-69-Gmm" id="0LC-Lm-zWZ"/>
+                        <outlet property="passwordField" destination="M9k-Bg-qse" id="nSJ-0e-WlY"/>
+                        <outlet property="statusLabel" destination="CkC-wm-cGw" id="fRg-iN-BRW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,7 +147,7 @@
                                 <rect key="frame" x="65" y="449" width="276" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8de-bv-gwA">
                                 <rect key="frame" x="65" y="534" width="131" height="27"/>
@@ -785,7 +797,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="gOy-NE-RSQ">
             <objects>
-                <tabBarController id="dfN-Do-MlF" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="RestaurantViewController" id="dfN-Do-MlF" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VQ5-yT-fmo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1302,7 +1314,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="bXd-qf-3c0">
             <objects>
-                <tabBarController id="v0j-sW-BUQ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="DriverViewController" id="v0j-sW-BUQ" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gDr-Js-ZHY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

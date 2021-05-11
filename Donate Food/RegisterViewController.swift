@@ -20,6 +20,10 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
 
         // Do any additional setup after loading the view.
     }
@@ -81,6 +85,10 @@ class RegisterViewController: UIViewController {
         let loginViewController = main.instantiateViewController(identifier: "LoginViewController")
         let delegate = self.view.window?.windowScene?.delegate as! SceneDelegate
         delegate.window?.rootViewController = loginViewController
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
 
