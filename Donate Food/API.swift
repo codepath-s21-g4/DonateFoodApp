@@ -73,7 +73,7 @@ struct API {
         
     }
     
-    static func postFoodRequest(pickupTime: String, foodType: String, quantity: String, dateCreated: String, points: Int) {
+    static func postFoodRequest(name: String, address: String, phoneNumber: String, pickupTime: String, foodType: String, quantity: String, dateCreated: String, points: Int) {
         
     
     
