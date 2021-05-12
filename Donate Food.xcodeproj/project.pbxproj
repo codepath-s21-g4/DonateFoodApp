@@ -23,6 +23,8 @@
 		DED729872628FC59006FE76B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED729852628FC59006FE76B /* LaunchScreen.storyboard */; };
 		DED729922628FC5A006FE76B /* Donate_FoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED729912628FC5A006FE76B /* Donate_FoodTests.swift */; };
 		DED7299D2628FC5A006FE76B /* Donate_FoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7299C2628FC5A006FE76B /* Donate_FoodUITests.swift */; };
+		DEE215F1264B322500C05BCC /* DriverProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE215F0264B322500C05BCC /* DriverProfileViewController.swift */; };
+		DEE215F3264B39DA00C05BCC /* DriverHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE215F2264B39DA00C05BCC /* DriverHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		DED729982628FC5A006FE76B /* Donate FoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Donate FoodUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED7299C2628FC5A006FE76B /* Donate_FoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donate_FoodUITests.swift; sourceTree = "<group>"; };
 		DED7299E2628FC5A006FE76B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEE215F0264B322500C05BCC /* DriverProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverProfileViewController.swift; sourceTree = "<group>"; };
+		DEE215F2264B39DA00C05BCC /* DriverHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverHomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				A7B5CE3A264465930081A2F3 /* API.swift */,
 				349382B026450E9D00571719 /* RegisterViewController.swift */,
 				34085CEF26450F1A00BA1EF5 /* LoginViewController.swift */,
+				DEE215F0264B322500C05BCC /* DriverProfileViewController.swift */,
+				DEE215F2264B39DA00C05BCC /* DriverHomeViewController.swift */,
 			);
 			path = "Donate Food";
 			sourceTree = "<group>";
@@ -283,10 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE215F1264B322500C05BCC /* DriverProfileViewController.swift in Sources */,
 				A7BBD53C2631457900E142D1 /* RestaurantCell.swift in Sources */,
 				349382B126450E9D00571719 /* RegisterViewController.swift in Sources */,
 				A7BBD54B263B8CB700E142D1 /* RestaurantProfileViewController.swift in Sources */,
 				A7BBD546263B8B5000E142D1 /* RestaurantHomeViewController.swift in Sources */,
+				DEE215F3264B39DA00C05BCC /* DriverHomeViewController.swift in Sources */,
 				A7BBD541263B894300E142D1 /* DonateViewController.swift in Sources */,
 				A7BBD537263137C400E142D1 /* PickupsViewController.swift in Sources */,
 				DED7297F2628FC57006FE76B /* ViewController.swift in Sources */,
