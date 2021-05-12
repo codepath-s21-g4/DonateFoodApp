@@ -18,6 +18,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let defaults = UserDefaults.standard
+
+        if let name = defaults.object(forKey: "donateapp-token") {
+            print("token: ", name)
+            if let is_driver = defaults.object(forKey: "is_driver"){
+                let is_driver = is_driver as! Bool
+                
+                if (is_driver) {
+                    let main = UIStoryboard(name: "Main", bundle: nil)
+                    let driverViewController = main.instantiateViewController(identifier: "DriverViewController")
+                    window?.rootViewController = driverViewController
+                } else {
+                    let main = UIStoryboard(name: "Main", bundle: nil)
+                    let restaurantViewController = main.instantiateViewController(identifier: "RestaurantViewController")
+                    window?.rootViewController = restaurantViewController
+                }
+                
+            } else {
+                let main = UIStoryboard(name: "Main", bundle: nil)
+                let loginViewController = main.instantiateViewController(identifier: "LoginViewController")
+                window?.rootViewController = loginViewController
+            }
+//            let main = UIStoryboard(name: "Main", bundle: nil)
+//            let dashboard = main.instantiateViewController(identifier: <#T##String#>)
+        } else {
+            print("no token available")
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let loginViewController = main.instantiateViewController(identifier: "LoginViewController")
+            window?.rootViewController = loginViewController
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

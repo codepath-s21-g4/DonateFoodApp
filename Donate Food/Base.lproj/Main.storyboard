@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Donate_Food" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Donate_Food" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,11 +71,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CkC-wm-cGw">
+                                <rect key="frame" x="64" y="678" width="281" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="E8s-t1-PGE"/>
+                    <connections>
+                        <outlet property="emailField" destination="dg2-69-Gmm" id="0LC-Lm-zWZ"/>
+                        <outlet property="passwordField" destination="M9k-Bg-qse" id="nSJ-0e-WlY"/>
+                        <outlet property="statusLabel" destination="CkC-wm-cGw" id="fRg-iN-BRW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,7 +145,7 @@
                                 <rect key="frame" x="65" y="449" width="276" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8de-bv-gwA">
                                 <rect key="frame" x="65" y="534" width="131" height="27"/>
@@ -149,9 +161,12 @@
                                     <segment title="Restaurant"/>
                                     <segment title="Driver"/>
                                 </segments>
+                                <connections>
+                                    <action selector="nameRenderSwitch:" destination="xUy-co-2mt" eventType="valueChanged" id="nwQ-ho-1jN"/>
+                                </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAc-eR-VVD">
-                                <rect key="frame" x="65" y="315" width="112" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurant Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAc-eR-VVD">
+                                <rect key="frame" x="65" y="315" width="195" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -161,7 +176,7 @@
                                 <rect key="frame" x="65" y="350" width="276" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="355-ml-nNS">
                                 <rect key="frame" x="65" y="399" width="0.0" height="0.0"/>
@@ -178,6 +193,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerButton:" destination="xUy-co-2mt" eventType="touchUpInside" id="Xnw-QK-wLt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wax-Yq-oob">
                                 <rect key="frame" x="65" y="683" width="116" height="41"/>
@@ -186,11 +204,30 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelButton:" destination="xUy-co-2mt" eventType="touchUpInside" id="4tb-um-E9X"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9H-1W-2Jj">
+                                <rect key="frame" x="69" y="753" width="297" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="FUv-AC-cza"/>
                     </view>
+                    <connections>
+                        <outlet property="accountTypeField" destination="cnv-Ou-AlL" id="TnW-eY-Cds"/>
+                        <outlet property="emailField" destination="dOV-TW-Hfb" id="jYL-td-VV4"/>
+                        <outlet property="errorLabel" destination="y9H-1W-2Jj" id="sYp-Pa-2hF"/>
+                        <outlet property="fnameField" destination="KZ3-uz-RgM" id="NyY-BM-23g"/>
+                        <outlet property="nameLabel" destination="qAc-eR-VVD" id="p5q-2e-DMU"/>
+                        <outlet property="passwordField" destination="9eV-4E-0nc" id="euz-EG-U4v"/>
+                        <outlet property="phoneNumField" destination="UK2-6O-LQd" id="0LN-NK-dS8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srV-ee-Oln" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -758,7 +795,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="gOy-NE-RSQ">
             <objects>
-                <tabBarController id="dfN-Do-MlF" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="RestaurantViewController" id="dfN-Do-MlF" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VQ5-yT-fmo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1279,7 +1316,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="bXd-qf-3c0">
             <objects>
-                <tabBarController id="v0j-sW-BUQ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="DriverViewController" id="v0j-sW-BUQ" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gDr-Js-ZHY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
