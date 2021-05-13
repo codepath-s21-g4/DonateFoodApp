@@ -28,9 +28,11 @@ struct API {
             if let error = error {
             print(error.localizedDescription)
             } else if let data = data {
-            let dataDict = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
-            let foodRequests = dataDict["food_requests"] as! [[String: Any]]
-            return completion(foodRequests)
+                let dataDict = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
+                
+                let foodRequests = dataDict["food_requests"] as! [[String: Any]]
+                
+                return completion(foodRequests)
             }
 
         }
@@ -130,13 +132,71 @@ struct API {
         task.resume()
     }
     
-    static func postFoodRequest(pickupTime: String, foodType: String, quantity: String, dateCreated: String, points: Int) {
+    static func postFoodRequest(pickupTime: String, foodType: String, quantity: String, points: Int, status: String, completionHandler: @escaping (Bool?) -> Void) {
         
-    
-    
-    
+        let dataToSend: [String:Any] = ["pickup_time": pickupTime, "food_type": foodType, "quantity": quantity, "points": points, "status": status]
+        let jsonData = try? JSONSerialization.data(withJSONObject: dataToSend )
+        
+        guard let url = URL(string: ProcessInfo.processInfo.environment["DATABASE_URL"]! + "/food_request/get-all") else { fatalError() }
+        //add correct url
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = jsonData
+        
+        let defaults = UserDefaults.standard
+        if let token = defaults.object(forKey: "donateapp-token") {
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
+        
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { (data, response, error) in
+            if let response = response as? HTTPURLResponse {
+                if (response.statusCode != 200) {
+                    return completionHandler(false)
+                }
+            }
+            if let error = error {
+                print(error.localizedDescription)
+                
+                return completionHandler(false)
+            } else if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                print("Response data string: \(dataString)")
+
+                return completionHandler(true)
+            }
+
+        }
+        task.resume()
     }
     
+    static func getRestaurantProfile(completion: @escaping ([[String:Any]]?) -> Void) {
+        guard let url = URL(string: ProcessInfo.processInfo.environment["DATABASE_URL"]! + "/food_request/get-all") else { fatalError() }
+        //add correct url
+        
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "GET"
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { (data, response, error) in
+            
+            if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                print("Response data string: \(dataString)")
+            }
+            
+            if let error = error {
+            print(error.localizedDescription)
+            } else if let data = data {
+                let dataDict = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
+                
+                let restaurantProfile = dataDict["restaurant_profile"] as! [[String: Any]]
+                
+                return completion(restaurantProfile)
+            }
+
+        }
+        task.resume()
+    }
     
     
 }
