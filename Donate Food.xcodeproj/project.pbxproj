@@ -15,6 +15,8 @@
 		A7BBD541263B894300E142D1 /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BBD540263B894200E142D1 /* DonateViewController.swift */; };
 		A7BBD546263B8B5000E142D1 /* RestaurantHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BBD545263B8B5000E142D1 /* RestaurantHomeViewController.swift */; };
 		A7BBD54B263B8CB700E142D1 /* RestaurantProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BBD54A263B8CB700E142D1 /* RestaurantProfileViewController.swift */; };
+		A7F3FE8E264F0D56008D3545 /* acceptRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F3FE8D264F0D56008D3545 /* acceptRequestViewController.swift */; };
+		A7F3FE93264F0FC2008D3545 /* editRestaurantProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F3FE92264F0FC2008D3545 /* editRestaurantProfileViewController.swift */; };
 		DED7297B2628FC57006FE76B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7297A2628FC57006FE76B /* AppDelegate.swift */; };
 		DED7297D2628FC57006FE76B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7297C2628FC57006FE76B /* SceneDelegate.swift */; };
 		DED7297F2628FC57006FE76B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7297E2628FC57006FE76B /* ViewController.swift */; };
@@ -53,6 +55,8 @@
 		A7BBD540263B894200E142D1 /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
 		A7BBD545263B8B5000E142D1 /* RestaurantHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantHomeViewController.swift; sourceTree = "<group>"; };
 		A7BBD54A263B8CB700E142D1 /* RestaurantProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantProfileViewController.swift; sourceTree = "<group>"; };
+		A7F3FE8D264F0D56008D3545 /* acceptRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acceptRequestViewController.swift; sourceTree = "<group>"; };
+		A7F3FE92264F0FC2008D3545 /* editRestaurantProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editRestaurantProfileViewController.swift; sourceTree = "<group>"; };
 		DED729772628FC56006FE76B /* Donate Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Donate Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED7297A2628FC57006FE76B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DED7297C2628FC57006FE76B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				34085CEF26450F1A00BA1EF5 /* LoginViewController.swift */,
 				DEE215F0264B322500C05BCC /* DriverProfileViewController.swift */,
 				DEE215F2264B39DA00C05BCC /* DriverHomeViewController.swift */,
+				A7F3FE8D264F0D56008D3545 /* acceptRequestViewController.swift */,
+				A7F3FE92264F0FC2008D3545 /* editRestaurantProfileViewController.swift */,
 			);
 			path = "Donate Food";
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 				349382B126450E9D00571719 /* RegisterViewController.swift in Sources */,
 				A7BBD54B263B8CB700E142D1 /* RestaurantProfileViewController.swift in Sources */,
 				A7BBD546263B8B5000E142D1 /* RestaurantHomeViewController.swift in Sources */,
+				A7F3FE93264F0FC2008D3545 /* editRestaurantProfileViewController.swift in Sources */,
 				DEE215F3264B39DA00C05BCC /* DriverHomeViewController.swift in Sources */,
 				A7BBD541263B894300E142D1 /* DonateViewController.swift in Sources */,
 				A7BBD537263137C400E142D1 /* PickupsViewController.swift in Sources */,
@@ -301,6 +308,7 @@
 				DED7297B2628FC57006FE76B /* AppDelegate.swift in Sources */,
 				A7B5CE3B264465930081A2F3 /* API.swift in Sources */,
 				DED7297D2628FC57006FE76B /* SceneDelegate.swift in Sources */,
+				A7F3FE8E264F0D56008D3545 /* acceptRequestViewController.swift in Sources */,
 				34085CF026450F1A00BA1EF5 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

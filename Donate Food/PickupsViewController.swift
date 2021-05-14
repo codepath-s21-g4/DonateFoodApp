@@ -70,9 +70,9 @@ class PickupsViewController: UIViewController, UITableViewDataSource, UITableVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let cell = sender as! UITableViewCell
         if let indexPath = tableView.indexPath(for: cell) {
-            let r = foodRequestsArray[indexPath.row]
-            //let acceptFoodRequestController = segue.destination as! RestaurantDetailViewController
-            //detailViewController.r = r
+            let tableindex = foodRequestsArray[indexPath.row]
+            let acceptFoodRequestController = segue.destination as? acceptRequestViewController
+           
         }
         
     }
