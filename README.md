@@ -30,7 +30,7 @@ Restaurant will post picture/list of food, then app will calculate (3 closest) s
 **Required Must-have Stories**
 
 Restaurants
-* [ ] create an account
+* [x] create an account
 * [x] login/logout (progress)
 <img src='https://recordit.co/6hmmHeadTu.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
@@ -45,15 +45,15 @@ Restaurants
 * [ ] can see driver profile who accepted request and ETA
 
 Driver/Volunteer
-* [ ] create an account
-* [ ] login/logout
-* [ ] home screen (progress)
+* [x] create an account
+* [x] login/logout
+* [x] home screen
 <img src='http://g.recordit.co/4LE4WnjqXp.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-* [ ] view profile (progress)
+* [x] view profile
 <img src='http://g.recordit.co/TeePfuBNWQ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-* [ ] table view of all the food donation requests (and filter)
+* [x] table view of all the food donation requests (and filter)
 * [ ] accept food donation request
 * [ ] map with 3 closest shelters to restaurant
 
@@ -65,7 +65,7 @@ Restaurants
 * [ ] status bar for driver and restaurant to see the progress of the mission
 
 Driver/Volunteer
-* [ ] points system that tracks how many runs and a page where they can redeem it
+* [x] points system that tracks how many runs and a page where they can redeem it
 
 ### 2. Screen Archetypes
 
