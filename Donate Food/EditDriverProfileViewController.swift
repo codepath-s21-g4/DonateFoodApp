@@ -29,9 +29,9 @@ class EditDriverProfileViewController: UIViewController {
             if (success) {
                 let name = resp["first_name"] as? String ?? ""
                 self.nameTextField.text = "\(name)"
-                let carDescription = resp["car_description"] as? String ?? ""
+                let carDescription = resp["car_description"] as? String
                 self.carDescriptionTextField.text = "\(carDescription)"
-                let phonenumber = resp["phone_number"] as! String
+                let phonenumber = resp["phone_number"] as? String
                 print(phonenumber)
                 self.phoneTextField.text = "\(phonenumber)"
             } else {

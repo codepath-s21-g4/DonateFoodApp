@@ -10,13 +10,67 @@ import UIKit
 
 class RestaurantHomeViewController: UIViewController {
 
+    
+    @IBOutlet weak var listFoodBtn: UIButton!
+    @IBOutlet weak var viewDriverBtn: UIButton!
+    @IBOutlet weak var restaurantName: UILabel!
+    @IBOutlet weak var shelterName: UILabel!
+    @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var ETA: UILabel!
+    @IBOutlet weak var restaurantHomeName: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        getAPIData()
+    }
+    
+    @objc func getAPIData() {
+        API.getRestaurantInfo { (restaurant) in
+            guard let restaurant = restaurant else {
+                return
+            }
+            
+            guard let foodRequest = restaurant["food_request"] as? [String: Any] else {
+                return
+            }
+            
+            self.restaurantName.text = restaurant["name"] as? String
+            self.shelterName.text = foodRequest["shelter"] as? String
+            self.status.text = foodRequest["status"] as? String
+            self.ETA.text = foodRequest["driver_eta_restaurant"] as? String
+            self.restaurantHomeName.text = restaurant["name"] as? String
+        }
+    }
 
+    @IBAction func onLogoutButton(_ sender: Any) {
+        
+        print("logout button pressed")
+        
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "donateapp-token")
+        defaults.removeObject(forKey: "is_driver")
+        
+        if let name = defaults.object(forKey: "donateapp-token") {
+            // JWT token still here
+            print("still has token ")
+        } else {
+            // redirect to login screen
+            print("token not found")
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let loginViewController = main.instantiateViewController(identifier: "LoginViewController")
+            let delegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+            delegate.window?.rootViewController = loginViewController
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 

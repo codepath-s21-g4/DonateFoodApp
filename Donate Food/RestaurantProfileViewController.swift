@@ -10,10 +10,35 @@ import UIKit
 
 class RestaurantProfileViewController: UIViewController {
 
+    @IBOutlet weak var restaurantName: UILabel!
+    @IBOutlet weak var phoneNumber: UILabel!
+    @IBOutlet weak var address: UILabel!
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getAPIData()
+    }
+    
+    @objc func getAPIData() {
+        API.getRestaurantInfo { (restaurant) in
+            guard let restaurant = restaurant else {
+                return
+            }
+            
+            self.restaurantName.text = restaurant["name"] as? String
+            self.phoneNumber.text = restaurant["phone_number"] as? String
+            self.address.text = restaurant["address"] as? String
+            
+            
+        }
     }
     
 

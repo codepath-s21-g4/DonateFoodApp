@@ -14,8 +14,10 @@ class PickupsViewController: UIViewController, UITableViewDataSource, UITableVie
 
     @IBOutlet weak var tableView: UITableView!
     
-    var restaurants: [String] = ["Golden Palace", "Amy's Cafe", "Joe's Grill", "Pete's Pizza", "Bob's Burger", "Olive Garden", "Royal Cuisine", "Chicken Express", "JollyBees", "Popeyes", "Mountain Mikes", "Tina's Tacos", "Dairy Queen", "Andrea's Food", "JJ's Fish & Chips", "Pancake House", "Napoli Pizzeria", "Ruth's Kitchen"]
+
     
+    var foodRequestsArray: [[String: Any?]] = []
+    let foodRefresh = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,21 +26,55 @@ class PickupsViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.delegate = self
 
         //self.tableView.reloadData()
+        
+        getAPIData()
+        
+        tableView.refreshControl = foodRefresh
+    }
+    
+    @objc func getAPIData() {
+        API.getPickups() { (foodRequests) in
+            guard let foodRequests = foodRequests else {
+                return
+            }
+            
+            self.foodRequestsArray = foodRequests
+            self.tableView.reloadData()
+            
+            self.foodRefresh.endRefreshing()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurants.count;
+        return foodRequestsArray.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell") as! RestaurantCell
         
-        let title = restaurants[indexPath.row]
+        let foodRequest = foodRequestsArray[indexPath.row]
         
-        //cell.textLabel!.text = restaurants[indexPath.row]
-        cell.nameLabel.text = title
+        
+        let restaurant = foodRequest["restaurant"] as! [String: Any]
+        
+        cell.nameLabel.text = restaurant["name"] as? String ?? ""
+        cell.timeLabel.text = foodRequest["time"] as? String ?? ""
+        cell.addressLabel.text = restaurant["address"] as? String ?? ""
+        cell.foodLabel.text = foodRequest["food_type"] as? String ?? ""
+        cell.quantityLabel.text = foodRequest["food_quantity"] as? String ?? ""
+        
         
         return cell;
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell) {
+            let tableindex = foodRequestsArray[indexPath.row]
+            let acceptFoodRequestController = segue.destination as? acceptRequestViewController
+           
+        }
+        
     }
     
 
@@ -52,4 +88,5 @@ class PickupsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     */
 
-}
+    }
+
