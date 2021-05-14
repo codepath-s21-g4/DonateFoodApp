@@ -30,7 +30,7 @@ Restaurant will post picture/list of food, then app will calculate (3 closest) s
 **Required Must-have Stories**
 
 Restaurants
-* [ ] create an account
+* [x] create an account
 * [x] login/logout (progress)
 <img src='https://recordit.co/6hmmHeadTu.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
@@ -46,15 +46,15 @@ Restaurants
 
 Driver/Volunteer
 * [ ] create an account
-* [ ] login/logout
-* [ ] home screen (progress)
+* [x] login/logout
+* [x] home screen (progress)
 <img src='http://g.recordit.co/4LE4WnjqXp.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 * [ ] view profile (progress)
 <img src='http://g.recordit.co/TeePfuBNWQ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-* [ ] table view of all the food donation requests (and filter)
-* [ ] accept food donation request
+* [x] table view of all the food donation requests (and filter)
+* [x] accept food donation request
 * [ ] map with 3 closest shelters to restaurant
 
 **Optional Nice-to-have Stories**
