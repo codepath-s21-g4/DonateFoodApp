@@ -138,7 +138,51 @@ struct API {
     }
     
     
-    
+     static func getDriver(completionHandler: @escaping ([String:Any]?)->Void){
+         guard let url = URL(string: ProcessInfo.processInfo.environment["DATABASE_URL"]! + "/driver/info") else { fatalError() }
+         var request = URLRequest(url: url)
+         request.httpMethod = "GET"
+         
+         let defaults = UserDefaults.standard
+         if let token = defaults.object(forKey: "donateapp-token"){
+             request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+         } else {
+             print("no token present!")
+         }
+         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+         let task = session.dataTask(with: request) { (data, response, error) in
+            if let response = response as? HTTPURLResponse {
+                print("response: \(response)")
+                if (response.statusCode != 200) {
+                    let resp = ["success": false]
+                    return completionHandler(resp)
+                }
+            }
+            if let error = error {
+                print(error.localizedDescription)
+                let resp = ["success": false]
+                return completionHandler(resp)
+            } else if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                print("Response data string: \(dataString)")
+                print("Data: \(data)")
+                
+                let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+                
+                if var responseJSON = responseJSON as? [String:Any] {
+                    responseJSON["success"] = true
+                    return completionHandler(responseJSON)
+                }
+                
+//                let resp = ["success": true, "response": dataString] as [String : Any]
+                print("here!!!")
+                let resp = ["success": false]
+                
+                return completionHandler(resp)
+            }
+        }
+        task.resume()
+     }
+     
 }
 
 
