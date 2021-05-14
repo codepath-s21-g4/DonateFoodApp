@@ -54,7 +54,7 @@ Driver/Volunteer
 <img src='http://g.recordit.co/TeePfuBNWQ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 * [x] table view of all the food donation requests (and filter)
-* [ ] accept food donation request
+* [x] accept food donation request
 * [ ] map with 3 closest shelters to restaurant
 
 **Optional Nice-to-have Stories**
