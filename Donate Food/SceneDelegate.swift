@@ -22,8 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let defaults = UserDefaults.standard
 
         if let name = defaults.object(forKey: "donateapp-token") {
-            print("token: ", name)
+            print("token on app start: ", name)
             if let is_driver = defaults.object(forKey: "is_driver"){
+                print("is_driver: \(is_driver)")
                 let is_driver = is_driver as! Bool
                 
                 if (is_driver) {
@@ -44,7 +45,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            let main = UIStoryboard(name: "Main", bundle: nil)
 //            let dashboard = main.instantiateViewController(identifier: <#T##String#>)
         } else {
-            print("no token available")
+            print("no token available on app start")
             let main = UIStoryboard(name: "Main", bundle: nil)
             let loginViewController = main.instantiateViewController(identifier: "LoginViewController")
             window?.rootViewController = loginViewController

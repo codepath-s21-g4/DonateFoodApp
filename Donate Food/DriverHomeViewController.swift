@@ -41,10 +41,36 @@ class DriverHomeViewController: UIViewController {
     @IBAction func updateStatus(_ sender: Any) {
         
     }
+    
+    @IBAction func onLogout(_ sender: Any) {
+
+        print("logout button pressed")
+        
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "donateapp-token")
+        defaults.removeObject(forKey: "is_driver")
+        
+        if let name = defaults.object(forKey: "donateapp-token") {
+            // JWT token still here
+            print("still has token ")
+        } else {
+            // redirect to login screen
+            print("token not found")
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let loginViewController = main.instantiateViewController(identifier: "LoginViewController")
+            let delegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+            delegate.window?.rootViewController = loginViewController
+        }
+        
+        
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
