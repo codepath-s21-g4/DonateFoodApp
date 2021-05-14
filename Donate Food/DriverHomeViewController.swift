@@ -16,8 +16,27 @@ class DriverHomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        viewWelcomeText()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        viewWelcomeText()
+    }
+    
+    @objc func viewWelcomeText(){
+        API.getDriver() { (respPackage) in
+            guard let resp = respPackage else { return }
+            let success = resp["success"] as! Bool
+            print(resp)
+            if (success) {
+                let name = resp["first_name"] as? String ?? "Driver"
+                self.welcomeTextField.text = "Welcome \(name)!"
+            } else {
+                print("error: API call to get driver failed!")
+            }
+        //                print(resp["response"]["access_token"])
+        }
+    }
 
     @IBAction func updateStatus(_ sender: Any) {
         
