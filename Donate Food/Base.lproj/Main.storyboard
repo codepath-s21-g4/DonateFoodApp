@@ -584,7 +584,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ETA" destination="XVg-jm-q0E" id="W1H-Bz-U8Z"/>
-                        <outlet property="listFoodButton" destination="snB-Ok-oQs" id="hrx-GG-lbF"/>
+                        <outlet property="listFoodBtn" destination="snB-Ok-oQs" id="UiU-aP-sqE"/>
                         <outlet property="restaurantHomeName" destination="ipz-K0-ISp" id="KNh-Rm-QaV"/>
                         <outlet property="restaurantName" destination="ZGB-pX-BWP" id="v97-MJ-BzK"/>
                         <outlet property="shelterName" destination="KWj-hZ-hpR" id="Ylr-5f-RDJ"/>

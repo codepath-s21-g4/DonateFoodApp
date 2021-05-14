@@ -177,6 +177,12 @@ struct API {
         var request = URLRequest(url: url)
         
         request.httpMethod = "GET"
+        
+        let defaults = UserDefaults.standard
+        if let token = defaults.object(forKey: "donateapp-token") {
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
+        
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
             
