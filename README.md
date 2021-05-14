@@ -31,14 +31,14 @@ Restaurant will post picture/list of food, then app will calculate (3 closest) s
 
 Restaurants
 * [x] create an account
-* [x] login/logout (progress)
+* [x] login/logout
 <img src='https://recordit.co/6hmmHeadTu.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-* [x] view profile (progress)
+* [x] view profile
 <img src='http://g.recordit.co/EmsSme0NK7.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 * [x] post a food donation request (progress)
-* [x] table view of all the food donation requests (progress)
+* [x] table view of all the food donation requests
 <img src='http://g.recordit.co/bhMRvXyP0Y.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 * [ ] can edit and remove food donation request
