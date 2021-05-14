@@ -33,10 +33,14 @@ class RestaurantHomeViewController: UIViewController {
                 return
             }
             
+            guard let foodRequest = restaurant["food_request"] as? [String: Any] else {
+                return
+            }
+            
             self.restaurantName.text = restaurant["name"] as? String
-            self.shelterName.text = restaurant["shelter"] as? String
-            self.status.text = restaurant["status"] as? String
-            self.ETA.text = restaurant["driver_eta_restaurant"] as? String
+            self.shelterName.text = foodRequest["shelter"] as? String
+            self.status.text = foodRequest["status"] as? String
+            self.ETA.text = foodRequest["driver_eta_restaurant"] as? String
             self.restaurantHomeName.text = restaurant["name"] as? String
         }
     }
