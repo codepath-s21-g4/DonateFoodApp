@@ -137,11 +137,12 @@ struct API {
         let dataToSend: [String:Any] = ["pickup_time": pickupTime, "food_type": foodType, "quantity": quantity]
         let jsonData = try? JSONSerialization.data(withJSONObject: dataToSend )
         
-        guard let url = URL(string: ProcessInfo.processInfo.environment["DATABASE_URL"]! + "/food_request/get-all") else { fatalError() }
+        guard let url = URL(string: ProcessInfo.processInfo.environment["DATABASE_URL"]! + "/food_request/create-food-request") else { fatalError() }
         //add correct url
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.httpBody = jsonData
         
         let defaults = UserDefaults.standard

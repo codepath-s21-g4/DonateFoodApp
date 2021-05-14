@@ -24,9 +24,11 @@ class DonateViewController: UIViewController {
         view.addGestureRecognizer(tap)
 
 
-        getAPIData()
     }
     
+    @IBAction func onSubmit(_ sender: Any) {
+        getAPIData()
+    }
     
     @objc func getAPIData() {
         let time = timeField.text!
@@ -52,6 +54,10 @@ class DonateViewController: UIViewController {
     
     @IBAction func onCancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     /*
     // MARK: - Navigation
