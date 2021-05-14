@@ -204,6 +204,83 @@ struct API {
         task.resume()
     }
     
+    static func editRestaurantProfile(name: String, phoneNumber: String, address: String, completionHandler: @escaping (Bool?) -> Void) {
+        let dataToSend: [String:Any] = ["name": name, "phone_number": phoneNumber, "address": address]
+        let jsonData = try? JSONSerialization.data(withJSONObject: dataToSend )
+        
+        guard let url = URL(string: ProcessInfo.processInfo.environment["DATABASE_URL"]! + "/restaurant/update-info") else { fatalError() }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.httpBody = jsonData
+        
+        let defaults = UserDefaults.standard
+        if let token = defaults.object(forKey: "donateapp-token") {
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
+        
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { (data, response, error) in
+            if let response = response as? HTTPURLResponse {
+                if (response.statusCode != 200) {
+                    return completionHandler(false)
+                }
+            }
+            if let error = error {
+                print(error.localizedDescription)
+                
+                return completionHandler(false)
+            } else if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                print("Response data string: \(dataString)")
+
+                return completionHandler(true)
+            }
+
+        }
+        task.resume()
+        
+    }
+    
+    static func acceptFoodRequest(restaurantName: String, shelter: String, DriverETA:String, completionHandler: @escaping (Bool?) -> Void) {
+        let dataToSend: [String:Any] = ["restaurant_name": restaurantName, "shelter": shelter, "driver_eta_restaurant": DriverETA]
+        let jsonData = try? JSONSerialization.data(withJSONObject: dataToSend )
+        
+        guard let url = URL(string: ProcessInfo.processInfo.environment["DATABASE_URL"]! + "/food_request/accept-request") else { fatalError() }
+        //add correct url
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.httpBody = jsonData
+        
+        let defaults = UserDefaults.standard
+        if let token = defaults.object(forKey: "donateapp-token") {
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
+        
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { (data, response, error) in
+            if let response = response as? HTTPURLResponse {
+                if (response.statusCode != 200) {
+                    return completionHandler(false)
+                }
+            }
+            if let error = error {
+                print(error.localizedDescription)
+                
+                return completionHandler(false)
+            } else if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                print("Response data string: \(dataString)")
+
+                return completionHandler(true)
+            }
+
+        }
+        task.resume()
+        
+    }
+    
     
     
     
