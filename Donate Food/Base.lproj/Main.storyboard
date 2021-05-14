@@ -1151,7 +1151,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="0i4-qS-ssd">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="kpi-x7-1NI"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="kpi-x7-1NI">
+                            <connections>
+                                <action selector="onLogout:" destination="YjJ-Id-KsL" id="juY-oD-Ejw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="welcomeTextField" destination="eJW-Od-XCP" id="LEt-3p-XWQ"/>
