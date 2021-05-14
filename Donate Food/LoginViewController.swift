@@ -30,9 +30,11 @@ class LoginViewController: UIViewController {
                 print(resp)
                 if (success) {
                     let access_token = resp["access_token"] as! String
+                    let filtered_token = String(access_token.filter { !" \n\t\r".contains($0) })
                     print(access_token)
+                    print("filtered_token: \(filtered_token)")
                     let defaults = UserDefaults.standard
-                    defaults.set(access_token, forKey: "donateapp-token")
+                    defaults.set(filtered_token, forKey: "donateapp-token")
                     
                     let is_driver = resp["is_driver"] as! Bool
                     if (is_driver) {
