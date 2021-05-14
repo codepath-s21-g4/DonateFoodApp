@@ -132,9 +132,9 @@ struct API {
         task.resume()
     }
     
-    static func postFoodRequest(pickupTime: String, foodType: String, quantity: String, points: Int, status: String, completionHandler: @escaping (Bool?) -> Void) {
+    static func postFoodRequest(pickupTime: String, foodType: String, quantity: String, completionHandler: @escaping (Bool?) -> Void) {
         
-        let dataToSend: [String:Any] = ["pickup_time": pickupTime, "food_type": foodType, "quantity": quantity, "points": points, "status": status]
+        let dataToSend: [String:Any] = ["pickup_time": pickupTime, "food_type": foodType, "quantity": quantity]
         let jsonData = try? JSONSerialization.data(withJSONObject: dataToSend )
         
         guard let url = URL(string: ProcessInfo.processInfo.environment["DATABASE_URL"]! + "/food_request/get-all") else { fatalError() }
@@ -170,8 +170,8 @@ struct API {
         task.resume()
     }
     
-    static func getRestaurantProfile(completion: @escaping ([[String:Any]]?) -> Void) {
-        guard let url = URL(string: ProcessInfo.processInfo.environment["DATABASE_URL"]! + "/food_request/get-all") else { fatalError() }
+    static func getRestaurantInfo(completion: @escaping ([String:Any]?) -> Void) {
+        guard let url = URL(string: ProcessInfo.processInfo.environment["DATABASE_URL"]! + "/restaurant/info") else { fatalError() }
         //add correct url
         
         var request = URLRequest(url: url)
@@ -189,14 +189,15 @@ struct API {
             } else if let data = data {
                 let dataDict = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
                 
-                let restaurantProfile = dataDict["restaurant_profile"] as! [[String: Any]]
                 
-                return completion(restaurantProfile)
+                return completion(dataDict)
             }
 
         }
         task.resume()
     }
+    
+    
     
     
 }
