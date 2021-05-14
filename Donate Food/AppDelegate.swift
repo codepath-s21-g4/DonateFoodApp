@@ -17,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
 //        // If local environment
-        setenv("DATABASE_URL", "http://localhost:8002", 1)
+//        setenv("DATABASE_URL", "http://localhost:8002", 1)
         
         // If pulling from prod database
-//        setenv("DATABASE_URL", "https://donatefood-backend.herokuapp.com", 1)
+        setenv("DATABASE_URL", "https://donatefood-backend.herokuapp.com", 1)
         
         return true
     }
