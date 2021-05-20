@@ -171,5 +171,7 @@ Restaurant's Side
 
 ### Demo
 
+![](Demo.gif)
+
 [![Live Demo Video With commentary](https://img.youtube.com/vi/zSBcJLfuzyA/0.jpg)](https://www.youtube.com/watch?v=zSBcJLfuzyA)
 
